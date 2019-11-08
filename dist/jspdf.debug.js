@@ -16140,7 +16140,7 @@
         rowData = {};
         j = 0;
 
-        while (j < tableRow.cells.length) {
+        while (j < tableRow.cells.length && headers[j] != undefined) {
           rowData[headers[j].name] = tableRow.cells[j].textContent.replace(/\r?\n/g, '');
           j++;
         }
